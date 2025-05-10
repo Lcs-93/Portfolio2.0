@@ -1,0 +1,101 @@
+.page-header {
+    background-color: var(--primary-900);
+    color: white;
+    padding: 7rem 0 3rem;
+    text-align: center;
+  
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+  }
+  
+  .filter-container {
+    margin-bottom: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  
+  .filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .tab-button {
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+  
+    &.active {
+      background-color: var(--primary-500);
+      color: white;
+    }
+  }
+  
+  .search-container {
+    display: flex;
+    gap: 0.5rem;
+  
+    .search-input {
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-md);
+      font-family: var(--font-family);
+      font-size: 0.9rem;
+      min-width: 250px;
+    }
+  
+    .search-button {
+      background-color: var(--primary-500);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: var(--primary-600);
+      }
+    }
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--space-4);
+  
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .no-projects {
+    text-align: center;
+    padding: var(--space-6) 0;
+  
+    p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: var(--space-3);
+    }
+  }
+  

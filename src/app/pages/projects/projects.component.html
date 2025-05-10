@@ -1,0 +1,41 @@
+<section class="page-header">
+    <div class="container">
+      <h1>Mes Projets</h1>
+    </div>
+  </section>
+  
+  <section class="section">
+    <div class="container">
+      <div class="filter-container">
+        <div class="filter-tabs">
+          <button 
+            *ngFor="let category of categories" 
+            class="tab-button" 
+            [class.active]="activeCategory === category"
+            (click)="setActiveCategory(category)">
+            {{ category }}
+          </button>
+        </div>
+  
+        <div class="search-container">
+          <input 
+            type="text" 
+            placeholder="Rechercher..." 
+            class="search-input"
+            [(ngModel)]="searchQuery"
+            (input)="filterProjects()">
+          <button class="search-button" (click)="clearSearch()" *ngIf="searchQuery">Effacer</button>
+        </div>
+      </div>
+  
+      <div class="projects-grid">
+        <app-project-card *ngFor="let project of filteredProjects" [project]="project"></app-project-card>
+      </div>
+  
+      <div class="no-projects" *ngIf="filteredProjects.length === 0">
+        <p>Aucun projet ne correspond aux critères de recherche.</p>
+        <button class="btn btn-outline" (click)="resetFilters()">Réinitialiser les filtres</button>
+      </div>
+    </div>
+  </section>
+  

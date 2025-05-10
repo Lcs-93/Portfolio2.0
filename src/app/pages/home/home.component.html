@@ -1,0 +1,103 @@
+<!-- home.component.html -->
+<app-hero></app-hero>
+
+<!-- À propos Preview Section -->
+<section class="section about-preview">
+  <div class="container">
+    <h2 class="section-title">À propos de moi</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>{{ personalBio }}</p>
+        <a [routerLink]="['/about']" class="btn btn-outline">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Compétences Preview Section -->
+<section class="section skills-preview">
+  <div class="container">
+    <h2 class="section-title">Mes Compétences</h2>
+    <div class="skills-content">
+      <div class="skills-grid">
+        <div *ngFor="let skill of topSkills" class="skill-item">
+          <div class="skill-info">
+            <h3 class="skill-name">{{ skill.name }}</h3>
+            <!-- <span class="skill-level">{{ skill.level }}%</span> -->
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" [style.width.%]="skill.level"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skills-action">
+        <a [routerLink]="['/skills']" class="btn btn-outline">Voir toutes mes compétences</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Projets Section -->
+<section class="section featured-projects">
+  <div class="container">
+    <h2 class="section-title">Projets en vedette</h2>
+    <div class="projects-grid">
+      <app-project-card *ngFor="let project of featuredProjects" [project]="project"></app-project-card>
+    </div>
+    <div class="projects-action">
+      <a [routerLink]="['/projects']" class="btn btn-primary">Voir tous les projets</a>
+    </div>
+  </div>
+</section>
+
+<app-hobbies></app-hobbies>
+
+<!-- Testimonials Section 
+<section class="section testimonials">
+  <div class="container">
+    <h2 class="section-title">What Others Say</h2>
+    <div class="testimonials-slider">
+      <div class="testimonial-card" *ngFor="let testimonial of testimonials; let i = index" [class.active]="i === currentTestimonial">
+        <div class="testimonial-content">
+          <p class="testimonial-text">"{{ testimonial.content }}"</p>
+          <div class="testimonial-author">
+            <div class="author-image" *ngIf="testimonial.imageUrl">
+              <img [src]="testimonial.imageUrl" [alt]="testimonial.name">
+            </div>
+            <div class="author-info">
+              <h4 class="author-name">{{ testimonial.name }}</h4>
+              <p class="author-role">{{ testimonial.role }}, {{ testimonial.company }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-navigation">
+        <button class="nav-button prev" (click)="prevTestimonial()" [disabled]="currentTestimonial === 0">
+          <span class="arrow-left"></span>
+        </button>
+        <div class="nav-dots">
+          <button *ngFor="let dot of testimonials; let i = index"
+                  class="nav-dot"
+                  [class.active]="i === currentTestimonial"
+                  (click)="setTestimonial(i)">
+          </button>
+        </div>
+        <button class="nav-button next" (click)="nextTestimonial()" [disabled]="currentTestimonial === testimonials.length - 1">
+          <span class="arrow-right"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>-->
+
+<!-- Contact Preview Section -->
+<section class="section contact-preview">
+  <div class="container">
+    <div class="contact-content">
+      <h2>prêt à démarrer votre projet?</h2>
+      <p>Discutons de la manière dont je peux vous aider à atteindre vos objectifs.</p>
+      <a [routerLink]="['/contact']" class="btn btn-primary">Entrer en contact</a>
+    </div>
+  </div>
+</section>

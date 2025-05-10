@@ -1,0 +1,39 @@
+<section class="page-header">
+  <div class="container">
+    <h1>Mes Compétences</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="skills-tabs">
+      <button 
+        *ngFor="let category of categories" 
+        class="tab-button" 
+        [class.active]="activeCategory === category"
+        (click)="setActiveCategory(category)">
+        {{ category }}
+      </button>
+    </div>
+
+    <div class="skills-container">
+      <div class="skills-grid">
+        <div *ngFor="let skill of filteredSkills" class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon">
+              <i [ngClass]="[skill.prefix, 'fa-' + skill.icon, 'skill-icon']"></i>
+            </div>
+            <div class="skill-info">
+              <h3>{{ skill.name }}</h3>
+              <!-- <span class="skill-level">{{ skill.level }}%</span> -->
+            </div>
+          </div>
+
+          <div class="skill-bar">
+            <div class="skill-progress" [style.width.%]="skill.level"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

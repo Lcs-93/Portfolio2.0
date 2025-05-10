@@ -1,0 +1,88 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 80%;
+  max-height: 80%;
+  background-color: #111;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.carousel img {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 8px;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 80px; // ✅ zone cliquable plus large
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
+
+
+}
+
+.nav.prev {
+  left: -4rem;
+}
+
+.nav.next {
+ right: -4rem;
+}
+
+.image-counter {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem; // ✅ évite les bords blancs à gauche
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 4px;
+}

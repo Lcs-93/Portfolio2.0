@@ -1,0 +1,40 @@
+<section class="page-header">
+    <div class="container">
+      <h1>Mon Expériences</h1>
+    </div>
+  </section>
+  
+  <section class="section">
+    <div class="container">
+      <div class="experience-timeline">
+        <div class="timeline-item" *ngFor="let exp of experience; let i = index" [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="i * 100">
+          <div class="timeline-marker" [class.current]="exp.current"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h2 class="timeline-title">{{ exp.title }}</h2>
+              <span class="timeline-period">{{ formatDate(exp.startDate) }} - {{ exp.current ? 'Present' : formatDate(exp.endDate) }}</span>
+            </div>
+  
+            <div class="timeline-company">
+              <h3>{{ exp.company }}</h3>
+              <span class="timeline-location">{{ exp.location }}</span>
+            </div>
+  
+            <div class="timeline-description">
+              <ul>
+                <li *ngFor="let item of exp.description">{{ item }}</li>
+              </ul>
+            </div>
+  
+            <div class="timeline-technologies" *ngIf="exp.technologies">
+              <h4>Technologies utilisées</h4>
+              <div class="tech-tags">
+                <span *ngFor="let tech of exp.technologies" class="tech-tag">{{ tech }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

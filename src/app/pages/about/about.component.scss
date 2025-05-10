@@ -1,0 +1,163 @@
+.page-header {
+    background-color: var(--primary-900);
+    color: white;
+    padding: 7rem 0 3rem;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+  
+  @media (min-width: 992px) {
+    .about-content {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+  
+  .about-image {
+    position: relative;
+  }
+  
+  .about-image::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-100);
+    z-index: -1;
+    border-radius: var(--radius-md);
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-text h3 {
+    font-size: 1.25rem;
+    color: var(--primary-500);
+    margin-bottom: var(--space-3);
+  }
+  
+  .about-bio {
+    margin-bottom: var(--space-4);
+  }
+  
+  .about-bio p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+  
+  .about-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+  }
+  
+  .detail-item h4 {
+    font-size: 1rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .detail-item p {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+  }
+  
+  .about-actions {
+    display: flex;
+    gap: var(--space-2);
+  }
+  
+  /* Formation Timeline */
+  .education-section {
+    background-color: var(--bg-secondary);
+  }
+  
+  .education-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 2rem;
+  }
+  
+  .education-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 7px;
+    width: 2px;
+    background-color: var(--primary-300);
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: var(--space-4);
+  }
+  
+  .timeline-marker {
+    position: absolute;
+    top: 0;
+    left: -2rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--primary-500);
+    border: 2px solid white;
+  }
+  
+  .timeline-content {
+    background-color: var(--bg-primary);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-content h4 {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-period {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-bottom: var(--space-2);
+  }
+  
+  @media (max-width: 768px) {
+    .about-actions {
+      flex-direction: column;
+    }
+  
+    .btn {
+      width: 100%;
+    }
+  }
+  

@@ -1,0 +1,45 @@
+<footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>{{ personalInfo?.firstName }} <span>{{ personalInfo?.lastName }}</span></h3>
+          <p>{{ personalInfo?.title }}</p>
+          <div class="social-links">
+            <a *ngFor="let link of socialLinks" [href]="link.url" target="_blank" rel="noopener noreferrer" class="social-icon" [attr.aria-label]="link.name">
+              <i class="fab fa-{{ link.icon }}"></i>
+              <span class="visually-hidden">{{ link.name }}</span>
+            </a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a [routerLink]="['/']">Accueil</a></li>
+            <li><a [routerLink]="['/about']">À propos</a></li>
+            <li><a [routerLink]="['/skills']">Compétences</a></li>
+            <li><a [routerLink]="['/projects']">Projets</a></li>
+            <li><a [routerLink]="['/experience']">Expérience</a></li>
+            <li><a [routerLink]="['/contact']">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>
+            <span>E-mail:</span> 
+            <a [href]="'mailto:' + (personalInfo?.contactInfo?.email || '')">{{ personalInfo?.contactInfo?.email || '' }}</a>
+          </p>
+          <p *ngIf="personalInfo?.contactInfo?.phone">
+            <span>Téléphone:</span> {{ personalInfo?.contactInfo?.phone }}
+          </p>
+          <p *ngIf="personalInfo?.contactInfo?.address">
+            <span>Localisation:</span> {{ personalInfo?.contactInfo?.address }}
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {{ currentYear }} {{ personalInfo?.firstName }} {{ personalInfo?.lastName }}. Tous droits reservés.</p>
+        <p>Fait avec <span class="heart">❤</span></p>
+      </div>
+    </div>
+  </footer>
+  

@@ -1,0 +1,29 @@
+<section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text" #heroText>
+          <h1 class="greeting">Bonjour, je suis <span>{{ personalInfo?.firstName }} {{ personalInfo?.lastName }}</span></h1>
+          <h2 class="title">{{ personalInfo?.title }}</h2>
+          <p class="tagline">{{ personalInfo?.tagline }}</p>
+          <div class="hero-cta">
+            <a [routerLink]="['/contact']" class="btn btn-primary">Entrer en contact</a>
+            <a [routerLink]="['/projects']" class="btn btn-outline">Voir mes projets</a>
+          </div>
+        </div>
+  
+        <div class="hero-image" #heroImage>
+          <div class="image-container">
+            <img [src]="personalInfo?.avatarUrl" alt="Profile photo">
+          </div>
+        </div>
+      </div>
+  
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <div class="scroll-text">Scroll down</div>
+      </div>
+    </div>
+  </section>
+  

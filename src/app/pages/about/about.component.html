@@ -1,0 +1,69 @@
+<section class="page-header">
+    <div class="container">
+      <h1>À propos de moi</h1>
+    </div>
+  </section>
+  
+  <section class="section about-section">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-image">
+          <img [src]="personalInfo?.avatarUrl" [alt]="personalInfo?.firstName + ' ' + personalInfo?.lastName">
+        </div>
+  
+        <div class="about-text">
+          <h2>{{ personalInfo?.firstName }} {{ personalInfo?.lastName }}</h2>
+          <h3>{{ personalInfo?.title }}</h3>
+  
+          <div class="about-bio">
+            <p>{{ personalInfo?.bio }}</p>
+          </div>
+  
+          <div class="about-details">
+            <div class="detail-item">
+              <h4>E-mail</h4>
+              <p>
+                <a [href]="'mailto:' + (personalInfo?.contactInfo?.email ?? '')">
+                  {{ personalInfo?.contactInfo?.email ?? '' }}
+                </a>
+              </p>
+            </div>
+  
+            <div class="detail-item" *ngIf="personalInfo?.contactInfo?.phone">
+              <h4>Téléphone</h4>
+              <p>{{ personalInfo?.contactInfo?.phone }}</p>
+            </div>
+  
+            <div class="detail-item" *ngIf="personalInfo?.contactInfo?.address">
+              <h4>Localisation</h4>
+              <p>{{ personalInfo?.contactInfo?.address }}</p>
+            </div>
+          </div>
+  
+          <div class="about-actions">
+            <a [routerLink]="['/contact']" class="btn btn-primary">Me Contacter</a>
+            <a *ngIf="personalInfo?.resumeUrl" [href]="personalInfo?.resumeUrl" target="_blank" class="btn btn-outline">Télécharger le CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section education-section">
+    <div class="container">
+      <h2 class="section-title">Formation</h2>
+  
+      <div class="education-timeline">
+        <div class="timeline-item" *ngFor="let edu of education">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>{{ edu.degree }}</h3>
+            <h4>{{ edu.institution }}, {{ edu.location }}</h4>
+            <p class="timeline-period">{{ edu.startDate }} - {{ edu.endDate }}</p>
+            <p *ngIf="edu.description">{{ edu.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

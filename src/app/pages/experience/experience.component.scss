@@ -1,0 +1,149 @@
+.page-header {
+    background-color: var(--primary-900);
+    color: white;
+    padding: 7rem 0 3rem;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .experience-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 2rem;
+  }
+  
+  .experience-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 7px;
+    width: 2px;
+    background-color: var(--primary-300);
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: var(--space-5);
+  }
+  
+  .timeline-marker {
+    position: absolute;
+    top: 0;
+    left: -2rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--primary-500);
+    border: 2px solid white;
+    z-index: 1;
+  }
+  
+  .timeline-marker.current {
+    background-color: var(--secondary-500);
+    box-shadow: 0 0 0 4px rgba(var(--secondary-500-rgb), 0.3);
+  }
+  
+  .timeline-content {
+    background-color: var(--bg-primary);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-2);
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .timeline-title {
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--primary-600);
+  }
+  
+  .timeline-period {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    background-color: var(--bg-tertiary);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+  }
+  
+  .timeline-company {
+    margin-bottom: var(--space-3);
+  }
+  
+  .timeline-company h3 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: var(--text-primary);
+  }
+  
+  .timeline-location {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+  
+  .timeline-description ul {
+    padding-left: var(--space-3);
+    margin-bottom: var(--space-3);
+  }
+  
+  .timeline-description li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  
+  .timeline-technologies h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+  }
+  
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .tech-tag {
+    font-size: 0.85rem;
+    background-color: var(--primary-100);
+    color: var(--primary-800);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    display: inline-block;
+  }
+  
+  /* Add CSS variables for animation RGB values */
+  :root {
+    --secondary-500-rgb: 233, 30, 99;
+  }
+  
+  @media (max-width: 768px) {
+    .timeline-header {
+      flex-direction: column;
+    }
+  
+    .timeline-period {
+      align-self: flex-start;
+    }
+  }
+  
