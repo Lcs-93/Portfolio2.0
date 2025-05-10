@@ -13,7 +13,7 @@ export const portfolioData: PortfolioData = {
           J’ai le goût du détail, le souci de l’expérience utilisateur et l’envie de progresser constamment. 
           Je suis actuellement à la recherche d'une nouvelle alternance pour continuer à développer mes compétences sur des projets concrets`,
     avatarUrl: 'https://www.bew-web-agency.fr/wp-content/uploads/2022/01/developpeur-web.jpg',
-    resumeUrl: 'assets/files/Bailly_Lucas_CV.pdf',
+    resumeUrl: 'assets/files/Bailly_Lucas_CV_New.pdf',
     contactInfo: {
       email: 'baillylucas04@gmail.com',
       phone: '+33 06 61 68 38 41',
