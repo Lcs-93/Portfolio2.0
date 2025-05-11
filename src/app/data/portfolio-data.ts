@@ -178,6 +178,30 @@ L'application intègre une interface d’authentification avec rôles (admin/cli
   'assets/images/Agences_Locations-7.jpg',
   'assets/images/Agences_Locations-8.jpg'
   ],
+  
+    },
+    {
+      id: '5',
+      title: 'SocialConnect — Mini réseau social Angular',
+      description: `SocialConnect est une application développée en Angular qui simule un mini réseau social en consommant l’API publique JSONPlaceholder.
+Elle permet de naviguer facilement entre utilisateurs, leurs publications, et les commentaires associés.
+Le tout est présenté dans une interface en dark mode futuriste, avec un design personnalisé en SCSS (effets néon, glow, blur, etc.).
+Ce projet met en avant la maîtrise d'Angular, du routing, des services HTTP, de la gestion de l’état via les templates et de l’architecture modulaire.`,
+      shortDescription: 'Une application Angular inspirée d’un réseau social, avec navigation dynamique entre utilisateurs, posts et commentaires. Design dark néon ultra moderne.',
+      technologies: ['Node.js', 'Express', 'EJS', 'MySQL2', 'bcrypt', 'express-session', 'method-override'],
+      imageUrl: 'https://tool-advisor.fr/wp-content/uploads/2023/05/reseaux-sociaux-les-plus-populaires.png',
+      projectUrl: null,
+      githubUrl: 'https://github.com/Lcs-93/SocialConnect',
+      featured: true,
+      category: 'Web Application',
+      date: '2025/04',
+      screenshots: [
+  'assets/images/Social-1.jpg',
+  'assets/images/Social-2.jpg',
+  'assets/images/Social-3.jpg',
+  'assets/images/Social-4.jpg'
+  ],
+  
     },
   ],
   testimonials: [
