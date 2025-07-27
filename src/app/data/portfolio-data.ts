@@ -121,7 +121,6 @@ L'application intègre une interface d’authentification avec rôles (admin/cli
   'assets/images/car-rental2.jpg',
   'assets/images/car-rental3.jpg',
   'assets/images/car-rental4.jpg',
-  'assets/images/car-rental5.jpg',
   'assets/images/car-rental6.jpg',
   'assets/images/car-rental7.jpg',
   'assets/images/car-rental8.jpg',
